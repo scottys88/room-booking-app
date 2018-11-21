@@ -1,0 +1,18 @@
+<div *ngFor="let room of rooms" class="rooms-list-wrapper">
+  <a routerLink='/room/{{room.id}}'>
+    <div class="room-listing">
+      <h3>{{ room.name }}</h3>
+      <span class="room-listing--image">
+        <img src="{{ room.image }}">
+      </span>
+      <div class="room-status">
+        <div *ngFor="let booking of room.bookings" class="room-status--next-appt">
+            <p>Meeting name: {{ booking.meetingName }}</p>
+            <p>Start time: {{ booking.start.dateTime }}</p>
+            <span class="room-status--indicator"></span>
+        </div>
+        
+      </div>
+    </div>
+  </a>
+</div>

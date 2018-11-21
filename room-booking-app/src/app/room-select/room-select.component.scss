@@ -1,0 +1,51 @@
+.rooms-list-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    .room-listing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: grey;
+        width: 300px;
+        align-content: center;
+        margin: 25px;
+        .room-listing--image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: contain;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        .room-status {
+            .room-status--next-appt {
+                .room-status--indicator {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    &.busy {
+                        background-color: red;
+                    }
+                    &.free {
+                        background-color: green;
+                    }
+                    &.15-mins-before-next-appt {
+                        background-color: orange;
+                    }
+                }
+            }
+        }
+    }
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
